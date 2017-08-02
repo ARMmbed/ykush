@@ -22,7 +22,7 @@ ykushcmd/objs/ykushcmd.o : ykushcmd/ykushcmd.cpp ykushcmd/commandParser.h
 ykushcmd/objs/commandParser.o : ykushcmd/commandParser.cpp ykushcmd/commandParser.h ykushcmd/usbcom.h 
 	$(CPP) $(PLATFORM_DEFS) -c ykushcmd/commandParser.cpp -o ykushcmd/objs/commandParser.o
 
-ykushcmd/objs/usbcom.o : ykushcmd/usbcom.cpp ykushcmd/linux/hidapi.h ykushcmd/usbcom.h
+ykushcmd/objs/usbcom.o : ykushcmd/usbcom.cpp ykushcmd/usbcom.h
 	$(CPP) $(PLATFORM_DEFS) -c ykushcmd/usbcom.cpp -o ykushcmd/objs/usbcom.o
 
 clean :
