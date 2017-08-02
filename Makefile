@@ -28,3 +28,6 @@ ykushcmd/objs/usbcom.o : ykushcmd/usbcom.cpp ykushcmd/usbcom.h
 clean :
 	rm -f bin/ykushcmd $(OBJS)
 
+install : bin/ykushcmd
+	install -m755 $< /usr/local/bin
+
