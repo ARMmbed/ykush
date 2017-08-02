@@ -8,8 +8,8 @@ PLATFORM_DEFS = -DOSX $(shell pkg-config --cflags hidapi)
 endif
 
 ifeq ($(shell uname),Linux)
-LIBS = -lhidapi-libusb -lusb-1.0 -ludev
-PLATFORM_DEFS = -DLINUX
+LIBS = $(shell pkg-config --libs hidapi-libusb) -lusb-1.0 -ludev
+PLATFORM_DEFS = -DLINUX $(shell pkg-config --cflags hidapi-libusb)
 endif
 
 ykushcmd : $(OBJS)
